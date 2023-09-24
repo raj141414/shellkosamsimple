@@ -153,7 +153,7 @@ async def send_bot_limits(_, query):
     UMT = 'Unlimited' if config_dict['USER_MAX_TASKS']  == '' else config_dict['USER_MAX_TASKS']
     BMT = 'Unlimited' if config_dict['QUEUE_ALL']       == '' else config_dict['QUEUE_ALL']
 
-    bot_limit = f'<b><i><u>Zee Bot Limitations</u></i></b>\n' \
+    bot_limit = f'<b><i><u>Bot Limitations</u></i></b>\n' \
                 f'<code>Torrent   : {TOR}</code> <b>GB</b>\n' \
                 f'<code>G-Drive   : {GDL}</code> <b>GB</b>\n' \
                 f'<code>Yt-Dlp    : {YTD}</code> <b>GB</b>\n' \
@@ -208,12 +208,10 @@ async def start(_, message):
         msg += f'Validity: {get_readable_time(int(config_dict["TOKEN_TIMEOUT"]))}'
         return await sendMessage(message, msg)
     elif config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
-        start_string = 'Bot Started.\n' \
-                       'Now I will send all of your stuffs here.\n' \
-                       'Use me at: @Z_Mirror'
+        start_string = 'Bot Started.'
     elif not config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
         start_string = 'Sorry, you cannot use me here!\n' \
-                       'Join: @Z_Mirror to use me.\n' \
+                       'Join: @KINGS_MIRROR to use me.\n' \
                        'Thank You'
     else:
         tag = message.from_user.mention
