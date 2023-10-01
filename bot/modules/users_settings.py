@@ -120,7 +120,7 @@ async def get_user_settings(from_user):
 <code>User Dump        :</code> <b>{user_dump}</b>
 <code>Remove Unwanted  :</code> <b>{lremname}</b>
 """
-    return text, buttons.build_menu(1)
+    return text, buttons.build_menu(2)
 
 
 async def update_user_settings(query):
