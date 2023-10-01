@@ -141,7 +141,7 @@ def get_readable_message():
         else:
             msg += f"\n<b>File Name</b> » <i>{escape(f'{download.name()}')}</i>\n\n"
         msg += f"⌑ <b>{download.status()}</b>"
-        if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PAUSED, MirrorStatus.STATUS_QUEUEDL
+        if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PAUSED, MirrorStatus.STATUS_QUEUEDL,
                                      MirrorStatus.STATUS_QUEUEUP, MirrorStatus.STATUS_LOCAL]:
             msg += f" » {download.speed()}"
             msg += f"\n⌑ {get_progress_bar_string(download.progress())} » {download.progress()}"
